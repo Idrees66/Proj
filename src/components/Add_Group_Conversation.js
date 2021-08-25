@@ -23,7 +23,7 @@ const Add_Group_Conversation = () => {
 
 
     return (
-        <ScrollView contentContainerStyle={{ height: sh(90), backgroundColor: "white" }}>
+        <ScrollView contentContainerStyle={{ height: sh(85), backgroundColor: "white" }}>
             <View style={{ flex: 0.7, alignItems: 'center', justifyContent: "space-around", }}>
        
                 <View style={{ width: sw(80), marginTop: 5 }}>

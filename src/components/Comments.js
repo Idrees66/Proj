@@ -113,7 +113,7 @@ const Comments = ({navigation}) => {
                     <Image source={require("../assets/heart.png")} style={{ width: rw(3), height: rw(3), marginRight: 4, alignSelf: "flex-end", }} resizeMode="contain" />
                 </Layout>
                 <Layout style={{ flexDirection: "row", marginTop: 10 }}>
-                    <Text style={{ fontSize: 11, color: "#BCBCBC" }} >{replyLikes}  Likes</Text>
+                    <Text style={{ fontSize: 11, color: "#BCBCBC" }} >{repliedComment.reply.replyLikes}  Likes</Text>
                    
                    
                 </Layout>
