@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View,Image,Button, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, } from '@react-navigation/native-stack';
 import Add_Post from './src/components/Add_Post';
@@ -19,7 +19,19 @@ function StackFunction() {
       <Stack.Screen name="Conversation" component={Conversation}
         options={{ title: 'Conversation', headerShown: false, }} />
       <Stack.Screen name="AddPost" component={Add_Post}
-        options={{ title: 'Add Post', headerShown: true, }} />
+        options={({ navigation, route }) => ({ title: 'Add Post', headerShown: true, 
+        headerRight: () => (
+          // <Button
+          //   // onPress={() => alert('This is a button!')}
+          //   title="Info"
+          //   color="#fff"
+          // />
+          <TouchableOpacity onPress={()=>navigation.navigate("Add_Group_Conversation")}>
+          <Image source={require("./src/assets/groupLogo.png")} style={{ width: 20, height: 20, }} resizeMode="contain" />
+          </TouchableOpacity>
+          
+        ),
+        })} />
           <Stack.Screen name="Comments" component={Comments}
         options={{ title: 'Comments', headerShown: false,
         headerStyle:{
